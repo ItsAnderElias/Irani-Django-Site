@@ -34,3 +34,14 @@ Criando e modificando a senha de um super usuário Django
 python manage.py createsuperuser
 python manage.py changepassword USERNAME
 ```
+
+Git
+```
+ver os repositorios e servidores conectados:
+git remote -v
+
+enviar os arquivos modificados:
+git add .
+git commit -m 'Mensagem'
+git push 'repositorio1' 'branch' ex: git push origin main
+```
