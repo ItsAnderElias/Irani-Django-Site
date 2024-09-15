@@ -8,6 +8,8 @@ media/
 static/
 project/local_settings.py
 comandos/
+MyPc
+MyPc.pub
 
 # Backup files # 
 *.bak 
