@@ -1,30 +1,258 @@
-body {
-    background-color: aqua;
-}
-
-nav {
-    background-color: #333;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Remove decorações de links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove o estilo de listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Zera bordas e preenchimento de elementos */
+img, iframe {
+    border: 0;
+}
+
+/* Força o uso da fonte padrão */
+body {
+    line-height: 1;
+    font-family: sans-serif;
+    background-color: #fff;
+    color: #333;
+    font-size: 62.5%;
+    transition: all 500ms ease-in-out;
+}
+
+/* Remove bordas padrões de elementos de formulário */
+input, button, textarea, select {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Estilos de botão resetados */
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Suporte para elementos HTML5 */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+    display: block;
+}
+
+/* PAGINA INTEIRA */
+.fullpage {
+    background-image: url(https://i.ibb.co/CsdD0tq/bg-irani.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+}
+
+/* NAVBAR */
+.navbar-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100dvw;
+    height: 50px;
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbar-container .homepage {
+    margin-left: 5%;
+    align-self: center;
+    height: 70%;
+    width: auto;
+}
+
+.homepage img {
+    height: 100%;
+    width: auto;
+    transition: all 300ms ease-in-out;
+}
+.homepage img:hover {
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.navbar-container .img-container {
+    display: flex;
+    height: 100%;
+    width: auto;
+}
+
+.img-container img {
+    align-self: center;
+    height: 100%;
+    width: auto;
+}
+
+.navbar-container .wpp {
+    display: flex;
+    align-self: center;
+    height: 75%;
+    width: auto;
+    margin-right: 5%;
+}
+.wpp img {
+    height: 100%;
+    width: auto;
+    transition: all 300ms ease-in-out;
+}
+.wpp img:hover {
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+.navbar-container .container {
+    height: 100%;
+    width: auto;
+}
+
+/* Logo imagem e logo texto na página inicial: */
+.full-logo {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    display: flex;
+    height: 40%;
+    width: 40%;
+}
+.full-logo .img-container {
+    width: 100%;
+    height: auto;
+}
+.full-logo .img-logo {
+    width: 100%;
+    height: auto;
+}
+.orcamento {
+    bottom: 20px;
+    left: 20px;
+    position: absolute;
+    width: 30%;
+    height: auto;
+}
+.orcamento .button-orcamento {
+    transition: all 200ms ease-in-out;
+    width: 100%;
+    height: auto;
+}
+.orcamento .button-orcamento:hover {
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* Menu da página inicial: */
+.full-menu {
+    align-self: flex-start;
+    padding-top: 50px;
+    flex-wrap: wrap;
+    height: auto;
+    width: 300px;
+}
+.aba-container {
+    display: flex;
+    flex-direction: row;
+}
+.aba-container img {
+    width: 20px;
+    height: auto;
+}
+.aba {
+    position: relative; /* Para que o conteúdo absoluto seja posicionado relativo a esta div */
+    margin: 10px;
+}
+/* Estilo do botão clicável */
+.toggle-button {
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 100%;
+    text-align: left;
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+    font-weight: 1rem;
+    transition: all 300ms ease-in-out;
+}
+.toggle-button:hover {
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+
+/* Estilo para a aba expansível (oculta por padrão) */
+.content {
+    position: absolute; /* Retira o conteúdo do fluxo normal */
+    top: 100%; /* Define a distância do topo do botão */
+    left: 0;
+    width: 400px;
+    height: auto;
+    max-height: 300px;
+    display: none; /* Inicialmente oculto */
+    overflow-y: auto;
+    padding: 10px;
+    display: none;
+    background-color: #f1f1f1;
+    z-index: 1; /* Define a prioridade da sobreposição */
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    flex: 1 1 1;
+}
+
+/* Links dentro da aba expansível */
+.content a {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    flex: 1;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: #ddd;
+    color: #000;
+}
+
+.content a:hover {
+    background-color: #ccc;
+}
+
+/* Imagem lateral da página inicial: */
+.lateral-img {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    width: 60%;
+    height: 94.6%;
     overflow: hidden;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-nav ul li a:hover {
-    background-color: #575757;
+.lateral-img .full-img {
+    width: 100%;
+    height: auto;
 }

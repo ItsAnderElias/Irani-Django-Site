@@ -1,8 +1,17 @@
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contato">Contato</a></li>
-    </ul>
-</nav>
+{% load static %}
+    <nav class="navbar-container">
+        <li class="homepage">
+            <div class="container">
+                <a href="/">
+                    <img src="{% static "svg/home-icon.svg" %}" alt="Pagina Inicial">
+                </a>
+        </li>
+        <li class="img-container">
+            <div class="container">
+                <img src="{% static "svg/irani-logo.svg" %}" alt="">
+            </div>
+        </li>
+        <li class="wpp"><a href="https://wa.link/3p1ria" target="_blank">
+            <img src="{% static "svg/wpp-icon.svg" %}" alt="Abrir whatsapp"></a>
+        </li>
+    </nav>

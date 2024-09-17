@@ -44,4 +44,6 @@ enviar os arquivos modificados:
 git add .
 git commit -m 'Mensagem'
 git push 'repositorio1' 'branch' ex: git push origin main
+no servidor: 
+git pull 'nome do repositorio' 'branch'
 ```

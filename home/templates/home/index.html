@@ -1,1 +1,140 @@
 {% extends "global/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="fullpage">
+    <section class="full-menu">
+        <div class="aba-container">
+            <img src="{% static "svg/project.svg" %}" alt="ícone projetos">
+            <section class="aba">
+                <button id="toggle-button-1" class="toggle-button">Projetos</button>
+                <div class="content" id="content-1">
+                    <div class="link-container">
+                    <a href="/projetos/#projetos-baixa-alta">Projetos elétricos de baixa e alta tensão</a>
+                    <a href="/projetos/#estudos-viabilidades">Estudos de viabilidades</a>
+                    <a href="/projetos/#grupos-geradores">Projetos Grupos Geradores</a>
+                    <a href="/projetos/#spda">Projetos SPDA</a>
+                    <a href="/projetos/#projetos-luminotecnicos">Projetos Luminotécnicos</a>
+                    <a href="/projetos/#quadros-distribuicao-comando">Projetos de quadros de comando e distribuição</a>
+                    <a href="/projetos/#diagramas-unifilares-trifilares">Diagramas</a>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <div class="aba-container">
+            <img src="{% static "svg/construct.svg" %}" alt="ícone construção">
+            <section class="aba">
+                <button id="toggle-button-2" class="toggle-button">Obras</button>
+                <div class="content" id="content-2">
+                    <div class="link-container">
+                    <a href="/obras/#obras-spda">Proteção SPDA(para raio)</a>
+                    <a href="/obras/#obras-iluminacao-comercial-industrial">Iluminação</a>
+                    <a href="/obras/#obras-cabine-alta-tensao">Cabines</a>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <div class="aba-container">
+            <img src="{% static "svg/shop-car.svg" %}" alt="ícone materiais elétricos">
+            <section class="aba">
+                <button id="toggle-button-3" class="toggle-button">Materiais Elétricos</button>
+                <div class="content" id="content-3">
+                    <div class="link-container">
+                    <a href="/materiais/#armarios-eletricos-quadro-comando-distribuicao">Armários e quadros de comando e distribuição</a>
+                    <a href="/materiais/#materiais-automacao-industrial">Automação Industrial</a>
+                    <a href="/materiais/#materiais-iluminacao-comercial-industrial">Iluminação Industrial e Comercial</a>
+                    <a href="/materiais/#motores-eletricos-pecas">Motores Elétricos e peças</a>
+                    <a href="/materiais/#cabos-comando-potencia">Cabos de Comando e Potência</a>
+                    <a href="/materiais/#inversores-frequencia-soft-startes">Inversores de Frequência e Soft-Startes</a>
+                    </div>
+                </div>
+        </section>
+        </div>
+        <div class="aba-container">
+            <img src="{% static "svg/service.svg" %}" alt="ícone serviços">
+            <section class="aba">
+                <button id="toggle-button-4" class="toggle-button">Serviços</button>
+                <div class="content" id="content-4">
+                    <div class="link-container">
+                    <a href="/servicos/#manutencao-maquinas-eletricas-industriais">Manutenção em maquinas elétricas industriais</a>
+                    <a href="/servicos/#manutencao-redes-baixa-alta-tensao">Manutenção em redes de baixa e alta tensão</a>
+                    <a href="/servicos/#rebobinagem-revisao-motores">Rebobinagem e revisão de motores</a>
+                    <a href="/servicos/#diagnostico-eletrico">Diagnóstico Elétrico</a>
+                    <a href="/servicos/#manutencao-preventiva-preditiva-correctiva">Manutenção Preventiva, Preditiva e Corretiva</a>
+                    <a href="/servicos/#manutencao-instalacao-subestacoes">Manutenção e instalação de substações de energia</a>
+                    <a href="/servicos/#montagem-paineis">Montagem de Painéis</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="aba-container">
+            <img src="{% static "svg/analysis.svg" %}" alt="ícone análise de energia">
+            <section class="aba">
+                <button id="toggle-button-5" class="toggle-button">Análise de Energia</button>
+                <div class="content" id="content-5">
+                    <div class="link-container">
+                    <a href="/analise-qualidade-energia/#analise-qualidade-energia">Qualidade da Energia</a>
+                    <a href="/analise-qualidade-energia/#presenca-harmonicas">Presença de Harmônicas</a>
+                    <a href="/analise-qualidade-energia/#analise-consumo-energia-eficiencia">Consumo de Energia e Eficiência</a>
+                    <a href="/analise-qualidade-energia/#fator-potencia">Fator de Potência</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="aba-container">
+            <img src="{% static "svg/acessory.svg" %}" alt="ícone de acessoria e consultoria">
+            <section class="aba">
+                <button id="toggle-button-6" class="toggle-button">Acessoria/Consultoria</button>
+                <div class="content" id="content-6">
+                    <div class="link-container">
+                    <a href="/acessoria_consultoria/#assessoria-consultoria-comercial-permanente">Comercial Permanente</a>
+                    <a href="/acessoria_consultoria/#assessoria-consultoria-nr10-nr12">Adequação NR10 e NR12</a>
+                    <a href="/acessoria_consultoria/#assessoria-consultoria-ajustes-tarifarios">Ajustes Tarifários</a>
+                    <a href="/acessoria_consultoria/#assessoria-consultoria-contratos-energia">Contratos de Energia</a>
+                    <a href="/acessoria_consultoria/#assessoria-consultoria-gerenciamento-fatura-energia">Gerenciamento de Fatura de Energia</a>
+                    <a href="/acessoria_consultoria/#assessoria-consultoria-acompanhamento-obras">Acompanhamento de Obras</a>
+                    <a href="/acessoria_consultoria/#assessoria-consultoria-ajuste-demanda-energia">Ajuste de Demanda</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="aba-container">
+            <img src="{% static "svg/checkbox.svg" %}" alt="ícone de laudos e inspeções">
+            <section class="aba">
+                <button id="toggle-button-7" class="toggle-button">Laudos/Inspeções</button>
+                <div class="content" id="content-7">
+                    <div class="link-container">
+                    <a href="/laudos_inspecoes/#laudos-aterramento">Laudo de Aterramento</a>
+                    <a href="/laudos_inspecoes/#laudo-credito-icms">Laudo de Crédito ICMS</a>
+                    <a href="/laudos_inspecoes/#laudos-tensao">Laudos de Baixa, Média e Alta Tensão</a>
+                    <a href="/laudos_inspecoes/#laudos-motores-instalacoes">laudos de Motores e Instalações</a>
+                    <a href="/laudos_inspecoes/#laudos-spda">Laudos de SPDA</a>
+                    <a href="/laudos_inspecoes/#laudo-iluminotecnico">Laudo Iluminotécnicos</a>
+                    <a href="/laudos_inspecoes/#pie-prontuario-instalacoes-eletricas">PIE - Prontuário das Instalações Elétricas</a>
+                    <a href="/laudos_inspecoes/#rti-relatorio-tecnico-inspecoes">RTI - Relatório Técnico das Inspeções</a>
+                    <a href="/laudos_inspecoes/#auto-vistoria-corpo-bombeiros">Auto de Vistoria Corpo de Bombeiros</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="full-logo">
+        <div class="img-container">
+            <img class="img-logo" src="{% static "svg/full-logo-irani.svg" %}" alt="">
+        </div>
+        
+    </section>
+    <div class="orcamento">
+        <a href="/enviar/">
+            <img class="button-orcamento" src="{% static "svg/button-orcamento.svg" %}" alt="">
+        </a>
+    </div>
+    <section class="lateral-img">
+        <div class="full-img">
+            <img src="{% static "svg/electrician.svg" %}" alt="">
+        </div>
+    </section>
+    </section>
+    <script src="{% static 'js/expandir_aba.js' %}"></script>
+</div>
+{% endblock %}

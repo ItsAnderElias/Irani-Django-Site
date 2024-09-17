@@ -2,8 +2,9 @@
 {% include "global/partials/head.html" %}
 
 <body>
-    {% include "global/partials/navbar.html" %}
-    <h1>Irani</h1>
-    <img src="{% static 'svg/irani-logo.svg' %}" alt="">
+        {% include "global/partials/navbar.html" %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
 </body>
 </html>
