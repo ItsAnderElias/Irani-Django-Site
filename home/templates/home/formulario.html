@@ -1,0 +1,26 @@
+{% extends "global/pages.html" %}
+{% load static %}
+{% block page-content %}
+<section class="fullpage">
+    <div class="formulario">
+    <h2>Solicite seu Orçamento:</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if form.errors %}
+            <div class="errors">
+                <ul>
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        <button type="submit">Enviar</button>
+    </form>
+    </div>
+</section>
+{% include 'global/partials/footer.html' %}
+{% endblock %}

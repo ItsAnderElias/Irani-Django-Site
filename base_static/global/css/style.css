@@ -1,3 +1,13 @@
+/* Importa estilos para telas menores */
+@import url(media.css);
+
+/* VARS */
+:root {
+    --bg: url(https://i.ibb.co/dMNrrpK/bg-irani.png);
+    --yellow: #FFBD59;
+    --white-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
 /* RESET */
 * {
     margin: 0;
@@ -51,7 +61,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 
 /* PAGINA INTEIRA */
 .fullpage {
-    background-image: url(https://i.ibb.co/CsdD0tq/bg-irani.jpg);
+    background-image: var(--bg);
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
@@ -65,7 +75,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 /* NAVBAR */
 .navbar-container {
     background-color: rgba(0, 0, 0, 0.6);
-    width: 100dvw;
+    width: 100%;
     height: 50px;
     top: 0;
     position: fixed;
@@ -89,7 +99,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 .homepage img:hover {
     border-radius: 10%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    box-shadow: var(--white-shadow);
 }
 
 .navbar-container .img-container {
@@ -105,11 +115,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 .navbar-container .wpp {
-    display: flex;
     align-self: center;
     height: 75%;
     width: auto;
-    margin-right: 10%;
+    margin-right: 5%;
 }
 .wpp img {
     height: 100%;
@@ -118,7 +127,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 .wpp img:hover {
     border-radius: 10%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    box-shadow: var(--white-shadow);
 }
 
 .navbar-container .container {
@@ -157,7 +166,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 .orcamento .button-orcamento:hover {
     border-radius: 10%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    box-shadow: var(--white-shadow);
 }
 
 /* Menu da página inicial: */
@@ -197,7 +206,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 .toggle-button:hover {
     border-radius: 10%;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    box-shadow: var(--white-shadow);
 }
 
 
@@ -257,68 +266,202 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     height: auto;
 }
 
-@media (max-width: 800px) {
-    .full-logo {
-        position: absolute;
-        left: 40%;
-        top: 10%;
-        display: flex;
-        height: auto;
-        width: 60%;
-    }
-    .full-logo .img-container {
-        position: absolute;
-        right: 0;
-        width: 100%;
-        height: auto;
-    }
-    .orcamento {
-        bottom: 20px;
-        left: auto;
-        right: auto;
-        position: absolute;
-        width: 100%;
-        height: auto;
-    }
-    .lateral-img {
-        display: none;
-    }
-    .footer-container {
-        font-family: "Barlow Condensed", sans-serif;
-        color: aliceblue;
-        font-weight: 500;
-        font-style: normal;
-        font-size: 20px;
-        background-color: rgba(0, 0, 0, 0.6);
-        width: 100%;
-        height: 200px;
-        bottom: 0;
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-    }
-    .footer-container .infos {
-        position: absolute;
-        right: 25%;
-        display: flex;
-        height: 100%;
-        width: 50%;
-        justify-content: center;
-        align-items: right;
-        flex-direction: column;
-    }
-    .footer-container .img-container img {
-        display: none;
-        align-self: center;
-        height: 100%;
-        width: auto;
-        right: 0;
-    }
-    .bloco-artigo {
-        width: 100dvw;
-        height: 100dvh;
-    }
-    .bloco-artigo h1 {
-        font-size: 3.0rem;
-    }
+/* Estilos Páginas */
+.bloco-artigo {
+    display: flex;
+    width: 100dvw;
+    height: 100dvh;
+    justify-content: center;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+    margin: 0 0 10rem 0;
+    font-size: 1rem;
+    text-align: left;
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    overflow: scroll;
 }
+.bloco-artigo h1 {
+    padding-top: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 4rem;
+    color: #62a3ec;
+}
+.bloco-artigo h1 + p {
+    font-size: 1.5rem;
+}
+.bloco-artigo h2 {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+    color: #62a3ec;
+}
+.bloco-artigo h3 {
+    font-size: 1.5rem;
+    color: #62a3ec;
+    margin: 1.5rem 0 0.5rem 1rem;
+}
+.bloco-artigo h1, h2, h3 {
+    color: var(--yellow);
+}
+.bloco-artigo ul {
+    margin-left: 4rem;
+    color: floralwhite;
+    font-size: 1rem;
+    list-style: lower-roman;
+}
+.bloco-artigo ul li {
+    margin: 0.5rem;
+}
+.bloco-artigo p {
+    margin: 1rem;
+    color: floralwhite;
+}
+.bloco-artigo h3 + p {
+    margin-left: 4rem;
+}
+.bloco-artigo h2 + p {
+    margin-left: 2rem;
+}
+.bloco-artigo strong {
+    color: #5e84ec;
+    font-style: italic;
+}
+
+.fullpages {
+    background-image: var(--bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    height: auto;
+    width: 100dvw;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: auto;
+}
+.fullpages .bar {
+    padding-top: 50px;
+}
+
+/* Formulários */
+.formulario {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 50%;
+    height: 50%;
+    align-items: flex-start;
+}
+
+.formulario input {
+    background-color: #fff;
+    width: 50%;
+    height: 2rem;
+    margin: 10px;
+}
+.formulario #id_arquivo {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.formulario p input #id_email {
+    margin-left: 10%;
+}
+
+.formulario h2 {
+    color: #FFBD59;
+}
+
+.formulario textarea {
+    background-color: #fff;
+}
+
+.formulario button {
+    height: auto;
+    width: 30%;
+    background-color: #fff;
+}
+
+.orcamento-sucesso {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    text-align: center;
+    width: 80%;
+    height: 50%;
+    color: #FFBD59;
+    font-size: 50px;
+}
+.orcamento-sucesso h1 {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+.footer-container {
+    font-family: "Barlow Condensed", sans-serif;
+    color: aliceblue;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-container .img-container {
+    height: 100%;
+    width: auto;
+}
+
+.footer-container .img-container img {
+    align-self: center;
+    height: 100%;
+    width: auto;
+    right: 0;
+}
+
+.footer-container .container {
+    height: 100%;
+    width: auto;
+}
+
+.footer-container .infos {
+    position: absolute;
+    right: 43%;
+    display: flex;
+    height: 100%;
+    width: auto;
+    justify-content: center;
+    align-items: right;
+    flex-direction: column;
+}
+.footer-container .infos img {
+    height: 100%;
+    width: auto;
+}
+
+.img-info {
+    margin-right: 5px;
+    width: auto;
+    height: 20px;
+    margin-top: 3px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
