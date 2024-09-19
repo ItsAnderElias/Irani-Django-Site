@@ -17,5 +17,7 @@ Corporate website, these websites aim to provide information about the company, 
 
 **Server:** Ubuntu 24.04 LTS, Nginx, AWS.
 
+**DataBase:** PostgreSQL 13.
+
 
 
